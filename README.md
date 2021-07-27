@@ -10,6 +10,7 @@ Install :
     wget --no-check-certificate https://github.com/workwhileweb/3proxy/master/3proxyinstall.sh
     chmod +x 3proxyinstall.sh
     ./3proxyinstall.sh
+    service 3proxy start
 
 Change authentication!!! 
 
