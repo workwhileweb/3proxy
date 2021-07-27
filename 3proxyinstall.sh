@@ -11,12 +11,13 @@ apt install ./3proxy-${version}.x86_64.deb
 #mkdir /etc/3proxy/
 #mv 3proxy /etc/3proxy/
 cd /etc/3proxy/
-wget --no-check-certificate https://github.com/workwhileweb/3proxy/raw/master/3proxy.cfg
+wget --no-check-certificate -O 3proxy.cfg https://github.com/workwhileweb/3proxy/raw/master/3proxy.cfg
 chmod 600 /etc/3proxy/3proxy.cfg
 #mkdir /var/log/3proxy/
-wget --no-check-certificate https://github.com/workwhileweb/3proxy/raw/master/.proxyauth
+wget --no-check-certificate -O .proxyauth https://github.com/workwhileweb/3proxy/raw/master/.proxyauth
 chmod 600 /etc/3proxy/.proxyauth
-cd /etc/init.d/
-wget --no-check-certificate https://github.com/workwhileweb/3proxy/raw/master/3proxy
-chmod  +x /etc/init.d/3proxy
-update-rc.d 3proxy defaults
+#cd /etc/init.d/
+#wget --no-check-certificate https://github.com/workwhileweb/3proxy/raw/master/3proxy
+#chmod  +x /etc/init.d/3proxy
+#update-rc.d 3proxy defaults
+killall -s USR1 3proxy
